@@ -17,7 +17,7 @@ const deviceHeight = Dimensions.get('window').height;
 
 function Login() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{width:deviceWidth,height:deviceHeight,alignItems:'center'}}>
       <StatusBar backgroundColor="#12486B" barStyle="light-content" />
       <ScrollView>
         <LinearGradient
@@ -38,12 +38,15 @@ function Login() {
             source={require('../assets/drop.png')}></ImageBackground>
           <View
             style={{
+              flex:1,
               flexDirection: 'row',
               height: deviceHeight,
-              width: 100,
+              width: deviceWidth,
               alignItems: 'center',
-              marginLeft: '4%',
-              marginRight: '8%',
+              alignSelf:'center',
+              justifyContent:'center',
+              marginRight:'10%'
+              
             }}>
             {/* ********************Start Login Form************************** */}
 
@@ -68,15 +71,16 @@ function Login() {
               <LinearGradient
                 colors={['#419197', '#419197', '#78D6C6', '#78D6C6']}
                 style={{
-                  flex: 1,
-                  maxHeight: 50,
-                  width: 140,
+                  flex:1,
+                  maxHeight:'15%',
+                  width:'35%',
                   borderRadius: 30,
-                  top: 25,
-                  left: 20,
+                  top: '8%',
+                  left: '2%',
                   justifyContent: 'center',
                   alignContent: 'center',
                   alignItems: 'center',
+
                 }}
                 start={{x: 1, y: 0}}
                 end={{x: 0, y: 1}}>
@@ -85,7 +89,7 @@ function Login() {
                 </Text>
               </LinearGradient>
 
-              <Text style={{left: '70%', color: '#419197', fontWeight: 'bold'}}>
+              <Text style={{left: '68%',bottom:'3%', color: '#419197', fontWeight: 'bold'}}>
                 Need a Help
               </Text>
             </View>
@@ -105,32 +109,40 @@ const styles = StyleSheet.create({
   },
   container1: {
     flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'baseline',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf:'center'
+
   },
   container3: {
-    marginTop: '280%',
+
+    marginTop: '0%',
     backgroundColor: '#fff',
-    height: 290,
+    height: '42%',
+    width:'92%',
     borderRadius: 30,
-    width: 400,
+    justifyContent:'center',
+    alignContent:'center',
+    alignSelf:'center',
   },
   loginText: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#fff',
+   
   },
   tinput: {
     fontWeight: '600',
-    paddingLeft: 20,
-    paddingBottom: 8,
+    paddingLeft: '10%',
+    paddingBottom: '3%',
     backgroundColor: '#ECF0F3',
-    marginTop: 20,
-    marginLeft: 20,
+    marginTop: '4%',
     borderRadius: 30,
-    width: 360,
+    width:'96%',
+    marginRight:'2%',
+    marginLeft:'2%',
     textAlign: 'left',
-    height: 45,
+    height: '15%',
     fontSize: 14,
   },
 });
